@@ -12,6 +12,7 @@ int main(){
 
     printf("Ingrese la cantidad de nombres a guardar: ");
     scanf("%d", &cantidadNombres);
+    getchar();
 
     punteroDeNombres = (char **) malloc(cantidadNombres * sizeof(char *));
 
@@ -23,6 +24,8 @@ int main(){
         punteroDeNombres[i] = (char *) malloc((strlen(buff)+1) * sizeof(char));
         strcpy(punteroDeNombres[i], buff);
     }
+
+    printf("\n***LISTA DE NOMBRES CARGADOS***\n\n");
 
     for (int i = 0; i < cantidadNombres; i++)
     {
